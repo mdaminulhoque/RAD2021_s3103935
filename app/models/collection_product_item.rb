@@ -1,0 +1,2 @@
+class CollectionProductItem < ApplicationRecord
+end
