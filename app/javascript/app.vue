@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
+    <mq-layout mq="sm">
+      <Collection />
+    </mq-layout>
   </div>
 </template>
 
 <script>
+import Home from "./components/Home.vue";
+import Collection from "./components/Collection.vue";
+
 export default {
-  data: function () {
+  components: { Home, Collection },
+  data: function() {
     return {
-      message: "Hello Vue!"
-    }
-  }
-}
+      message: "Hello Vue!",
+    };
+  },
+};
 </script>
 
 <style scoped>

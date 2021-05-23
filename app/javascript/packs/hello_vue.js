@@ -5,18 +5,39 @@
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
-import Vue from 'vue'
-import App from '../app.vue'
+import Vue from "vue";
+import App from "../app.vue";
+import VueMq from "vue-mq";
 
-document.addEventListener('DOMContentLoaded', () => {
+import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
+
+// Import Bootstrap an BootstrapVue CSS files (order is important)
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+
+// Make BootstrapVue available throughout your project
+Vue.use(BootstrapVue);
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin);
+
+Vue.use(VueMq, {
+  breakpoints: {
+    // default breakpoints - customize this
+    sm: 450,
+    md: 1250,
+    lg: Infinity,
+  },
+  defaultBreakpoint: "sm", // customize this for SSR
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const app = new Vue({
-    render: h => h(App)
-  }).$mount()
-  document.body.appendChild(app.$el)
+    render: (h) => h(App),
+  }).$mount();
+  document.body.appendChild(app.$el);
 
-  console.log(app)
-})
-
+  console.log(app);
+});
 
 // The above code uses Vue without the compiler, which means you cannot
 // use Vue to target elements in your existing html templates. You would
@@ -30,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //   {{message}}
 //   <app></app>
 // </div>
-
 
 // import Vue from 'vue/dist/vue.esm'
 // import App from '../app.vue'
