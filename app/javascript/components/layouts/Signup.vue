@@ -4,15 +4,32 @@
       <div class="close-btn">
         <img block width="15" src="../../assets/canel.png" />
       </div>
-      <p class="login-heading">LOGIN</p>
+      <p class="signup-heading">SIGN UP</p>
     </div>
-    <p class="login-desc">Login in to enter the wonderland of fashion...</p>
+    <p class="signup-desc">
+      Join us ... to get the best that the world of fashion can offer.
+    </p>
     <div class="underline-tile"></div>
     <input type="text" class="input-username" placeholder="Username" />
     <input type="text" class="input-password" placeholder="Password" />
+    <input
+      type="text"
+      class="input-repassword"
+      placeholder="Re-enter Password"
+    />
+    <input type="text" class="input-email" placeholder="Email" />
+    <div class="terms-and-conditions">
+      <input
+        type="checkbox"
+        class="tnccheck"
+        id="vehicle1"
+        v-model="status"
+        value=""
+      />
+    </div>
     <b-button class="login-btn">Login</b-button>
     <div class="underline-btn"></div>
-    <p class="forgot-password-txt">Forgot passsword?</p>
+    <p class="forgot-password-txt">Already a user?</p>
     <div class="bold-tile"></div>
     <div class="blank-space-cover"></div>
   </div>
@@ -20,7 +37,12 @@
 
 <script>
 export default {
-  name: "Login",
+  name: "Signup",
+  data() {
+    return {
+      status: "not_accepted",
+    };
+  },
 };
 </script>
 
@@ -47,7 +69,7 @@ body {
   margin-left: 20px;
 }
 
-.login-heading {
+.signup-heading {
   text-align: center;
   font-size: 20px;
   position: absolute;
@@ -69,8 +91,8 @@ input[type="text"] {
   opacity: 10;
 }
 
-.login-desc {
-  width: 80%;
+.signup-desc {
+  width: 90%;
   font-size: 35px;
   margin-left: 20px;
   margin-top: 30px;
@@ -93,6 +115,40 @@ input[type="text"] {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 25px;
+}
+
+.input-repassword {
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.input-email {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 25px;
+}
+
+.terms-and-conditions {
+  background: #858383;
+  width: 30px;
+  height: 30px;
+}
+
+.tnccheck {
+  border-radius: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+input[type="checkbox"] {
+  background: rgb(0, 0, 0);
+}
+
+input[type="checkbox"]:after:checked {
+  font-size: 15px;
+  text-align: center;
+  line-height: 15px;
 }
 
 .login-btn {

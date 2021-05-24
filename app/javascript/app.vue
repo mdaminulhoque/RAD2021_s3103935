@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <mq-layout mq="sm">
-      <Login />
+      <Signup />
     </mq-layout>
   </div>
 </template>
@@ -10,9 +10,10 @@
 import Home from "./components/Home.vue";
 import Collection from "./components/Collection.vue";
 import Login from "./components/layouts/Login.vue";
+import Signup from "./components/layouts/Signup.vue";
 
 export default {
-  components: { Home, Collection, Login },
+  components: { Home, Collection, Login, Signup },
   data: function() {
     return {
       message: "Hello Vue!",
