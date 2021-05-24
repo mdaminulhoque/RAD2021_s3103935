@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <mq-layout mq="sm">
-      <Home />
+      <Login />
     </mq-layout>
   </div>
 </template>
