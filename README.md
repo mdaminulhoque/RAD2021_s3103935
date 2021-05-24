@@ -8,6 +8,7 @@ Attempted Level - 90+
 
 Heroku url - https://polar-shore-66070.herokuapp.com/
 
+```
 remote: Entrypoint mini-css-extract-plugin = \*
 remote: 2 modules
 remote:  
@@ -30,3 +31,4 @@ remote:
 remote: Verifying deploy... done.
 To https://git.heroku.com/polar-shore-66070.git
 78a5fc5..861acb9 master -> master
+```
